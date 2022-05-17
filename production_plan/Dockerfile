@@ -1,6 +1,6 @@
 FROM python:3.9-bullseye AS base
 
-RUN mkdir -p /powerplant_coding_challenge/production_plan/src
+RUN mkdir -p /powerplant_coding_challenge/production_plan/api
 
 WORKDIR /powerplant_coding_challenge/production_plan/
 
@@ -13,7 +13,7 @@ COPY . .
 
 EXPOSE 8888
 
-CMD ["python","src/production_plan.py"]
+CMD ["python","api/production_plan.py"]
 
 # Run tests to validate app
 

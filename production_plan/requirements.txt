@@ -1,11 +1,8 @@
 flask==2.1.1
 flask_restful==0.3.9
 flask_api==3.0.post1
-unittest
-flask_expects_json
-flask_socketio
-asyncio
-socketio
-json
-jsonschema
-logging
+flask-expects-json==1.7.0
+Flask-SocketIO==5.1.2
+asyncio==3.4.3
+socketIO-client==0.7.2
+jsonschema==4.4.0
