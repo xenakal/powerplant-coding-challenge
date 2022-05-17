@@ -1,5 +1,4 @@
 from powerplant import PowerPlantFactory
-from simplex import optimise_simplex 
 from priority_listing import optimise_priority_listing
 
 def get_optimal_powerplants_for_load(payload_parser, logger=None, method="PL"):
