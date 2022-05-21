@@ -51,13 +51,13 @@ There are a wide variety of algorithms to solve the unit commitment problem. Mod
 
 We consider three types of powerplants, according to the source of energy they use: 
 
-* Kerosine: $C_{i}^{G}(Q) = \frac{p^{K}}{e_{i}}*Q => M_{i} = \frac{p^{K}}{e_{i}}$ 
+* Kerosine: $C_{i}^{G}(Q) = \frac{p^{K}}{e_{i}}*Q$ 
 
-* Wind: $C_{i}^{W}(Q) = 0 => M_{i} = 0$
+* Wind: $C_{i}^{W}(Q) = 0$
 
-* Natural gas: $C_{i}^{G}(Q) = (\frac{p^{G}}{e_{i}} + p_{CO2}*r_{CO2})*Q => M_{i} = \frac{p^{G}}{e_{i}} + p_{CO2}*r_{CO2}$
+* Natural gas: $C_{i}^{G}(Q) = (\frac{p^{G}}{e_{i}} + p_{CO2}*r_{CO2})*Q$
 
-where $M_i$ the marginal cost of unit $i$, $e_{i}$ the efficiency of powerplant $i$, $p^{X}$ the price of ressource $X$ (eur/MWh), $p_{CO2}$ the price of CO2 (eur/ton) and $r_{CO2}$ the mass of CO2 generated per MWh (ton/MWh). The powerplants are then ordered according to their marginal cost.
+where $e_{i}$ the efficiency of powerplant $i$, $p^{X}$ the price of ressource $X$ (eur/MWh), $p_{CO2}$ the price of CO2 (eur/ton) and $r_{CO2}$ the mass of CO2 generated per MWh (ton/MWh). The powerplants are then ordered according to their full load average cost.
 
 <br>  
 
