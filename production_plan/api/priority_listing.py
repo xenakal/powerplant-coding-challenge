@@ -1,5 +1,4 @@
 import logging
-from numpy import power
 
 def optimise_priority_listing(powerplants, load):
     """ 
@@ -12,7 +11,7 @@ def optimise_priority_listing(powerplants, load):
     """
     sorted_powerplants = sort_by_merit_order(powerplants)
     total_generated = 0
-    for idx, powerplant in enumerate(sorted_powerplants):
+    for powerplant in sorted_powerplants:
         remaining = load - total_generated
         produces = 0
 
@@ -39,8 +38,12 @@ def optimise_priority_listing(powerplants, load):
 
 def sort_by_merit_order(powerplants):
     """Sort powerplants by merit order"""
-    # return sorted(powerplants, key=lambda p: ())
-    return sort_by_marginal_cost(powerplants)
+    # return sort_by_marginal_cost(powerplants)
+    return sort_by_flac(powerplants)
+
+def sort_by_flac(powerplants):
+    """Sort powerplants by full load average cost."""
+    return sorted(powerplants, key=lambda p: p.get_flac()) 
 
 def sort_by_marginal_cost(powerplants):
     """Sort powerplants by marginal cost"""

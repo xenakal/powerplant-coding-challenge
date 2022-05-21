@@ -33,6 +33,13 @@ class PowerPlant:
     def get_marginal_cost(self):
         return self.get_fuel_cost()/self.efficiency 
 
+    def cost_at_production(self, production):
+        return (self.get_fuel_cost()/self.efficiency)*production
+
+    def get_flac(self):
+        """Returns the full load average cost of the powerplant."""
+        return self.cost_at_production(self.pmax)/self.pmax
+
     def get_fuel_cost(self):
         pass
 
@@ -65,5 +72,8 @@ class GasFired(PowerPlant):
     def get_fuel_cost(self):
         return self.payload_parser.get_gas_cost()
  
+    def cost_at_production(self, production):
+        return super().cost_at_production(production) + self.co2_ton_per_mwh*self.payload_parser.get_co2_cost()*production
+
     def get_marginal_cost(self):
         return super().get_marginal_cost() + self.co2_ton_per_mwh*self.payload_parser.get_co2_cost()

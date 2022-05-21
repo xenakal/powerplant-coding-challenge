@@ -31,7 +31,6 @@ class PriorityListingTests(unittest.TestCase):
         parser = self.load_input_json(filename)
         powerplants = [PowerPlantFactory.init_powerplant(p, parser) for p in parser.get_powerplants_names()]
         output = optimise_priority_listing(powerplants, load)
-        print(output)
         self.verify_output(output, load)
 
     def verify_output(self, output, load):

@@ -41,7 +41,7 @@ The goal is to find the production plan that minimises the total cost of energy 
 
 ## Optimisation algorithm 
 
-There are a wide variety of algorithms to solve the unit commitment problem. Modern methods use algorithms such as branch and bounds, lagrangian relaxation,  In this project, a simple priority list approach has been employed. This algorithm runs in linear time with respect to the size of the powerplants. Its advantage is its quick execution time ($O(n)$ complexity), when compared to other methods. On the other hand, the algorithm will often not output the optimal solution.   
+There are a wide variety of algorithms to solve the unit commitment problem. Modern methods use algorithms such as branch and bounds, lagrangian relaxation, MIP, genetic algorithms and others.  In this project, a simple priority list approach has been employed. This algorithm runs in linear time with respect to the size of the powerplants. Its advantage is its quick execution time ($O(n)$ average complexity, $O(n^2) worst case), when compared to other methods. On the other hand, the algorithm will often not output the optimal solution.   
 
 
 <br>  
